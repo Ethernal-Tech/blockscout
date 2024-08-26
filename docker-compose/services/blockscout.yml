@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  blockscout:
+    image: 0xethernal/blockscout:6.5.0-beta
+    container_name: 'blockscout'
+    command: bash -c "scripts/run.sh"
+    env_file:
+      - ../blockscout.env
+    volumes:
+      - ./logs/:/explorer/logs/
+      - ./scripts:/explorer/scripts/
