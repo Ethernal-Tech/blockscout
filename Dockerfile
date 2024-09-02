@@ -23,4 +23,6 @@ RUN chmod -R 400 blockscout && \
     chown -R explorer blockscout && \
     chgrp -R explorer-group blockscout
 
+COPY --chown=explorer:explorer-group scripts scripts
+
 EXPOSE 4000

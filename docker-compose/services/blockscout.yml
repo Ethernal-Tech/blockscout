@@ -6,7 +6,9 @@ services:
     container_name: 'blockscout'
     command: bash -c "scripts/run.sh"
     env_file:
-      - ../blockscout.env
+      - /opt/blockscout/blockscout.env
     volumes:
       - ./logs/:/explorer/logs/
       - ./scripts:/explorer/scripts/
+    ports:
+      - "4000:4000"
