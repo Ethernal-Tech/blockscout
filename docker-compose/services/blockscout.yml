@@ -9,6 +9,5 @@ services:
       - /opt/blockscout/blockscout.env
     volumes:
       - ./logs/:/explorer/logs/
-      - ./scripts:/explorer/scripts/
     ports:
       - "4000:4000"
