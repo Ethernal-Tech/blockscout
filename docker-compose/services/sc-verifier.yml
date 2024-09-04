@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  sc-verifier:
+    image: ghcr.io/blockscout/smart-contract-verifier:v1.8.0
+    container_name: 'sc-verifier'
+    environment:
+      - SMART_CONTRACT_VERIFIER__CONFIG=/app/config.toml
+    volumes:
+       - /opt/blockscout/contract-verifier.toml:/app/config.toml
+    ports:
+      - "8050:8050"
+      - "8051:8051"

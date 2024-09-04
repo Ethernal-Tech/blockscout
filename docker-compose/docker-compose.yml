@@ -19,3 +19,11 @@ services:
     extends:
       file: ./services/blockscout.yml
       service: blockscout
+  sc-verifier:
+    depends_on:
+      blockscout:
+        condition: service_healthy
+    extends:
+      file: ./services/sc-verifier.yml
+      service: sc-verifier
+
