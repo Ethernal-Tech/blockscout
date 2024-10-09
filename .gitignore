@@ -1,0 +1,2 @@
+docker-compose/services/logs
+docker-compose/services/blockscout-db-data

@@ -1,6 +1,5 @@
 # !/bin/bash
 
-pushd blockscout
+cd /explorer/blockscout
 set -a
 mix phx.server
-popd

@@ -25,4 +25,6 @@ RUN chmod -R 400 blockscout && \
 
 COPY --chown=explorer:explorer-group scripts scripts
 
+RUN ./scripts/compilation.sh && ./scripts/npm-start.sh
+
 EXPOSE 4000
