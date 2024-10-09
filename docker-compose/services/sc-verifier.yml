@@ -9,4 +9,3 @@ services:
        - /opt/blockscout/contract-verifier.toml:/app/config.toml
     ports:
       - "8050:8050"
-      - "8051:8051"

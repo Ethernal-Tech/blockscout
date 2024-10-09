@@ -1,14 +1,7 @@
 version: '3.9'
 
 services:
-  db-init:
-    extends:
-      file: ./services/db.yml
-      service: db-init
   db:
-    depends_on:
-      db-init:
-        condition: service_completed_successfully
     extends:
       file: ./services/db.yml
       service: db
@@ -20,10 +13,6 @@ services:
       file: ./services/blockscout.yml
       service: blockscout
   sc-verifier:
-    depends_on:
-      blockscout:
-        condition: service_healthy
     extends:
       file: ./services/sc-verifier.yml
       service: sc-verifier
-
